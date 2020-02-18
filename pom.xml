@@ -7,7 +7,7 @@
 	<artifactId>servlet-practices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -15,7 +15,7 @@
 
 	<dependencies>
 	</dependencies>
-
+	
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
@@ -30,12 +30,13 @@
 			</plugin>
 		</plugins>
 	</build>
+				
 	<modules>
+		<module>emaillist01</module>
 		<module>helloweb</module>
 		<module>guestbook01</module>
-		<module>jstlel</module>
-		<module>guestbook02</module>
-		<module>emaillist01</module>
 		<module>emaillist02</module>
+		<module>guestbook02</module>
+		<module>jstlel</module>
 	</modules>
 </project>
