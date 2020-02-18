@@ -9,20 +9,18 @@
 	</parent>
 	<artifactId>guestbook01</artifactId>
 	<packaging>war</packaging>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
-
-
+	</properties>	
 
 	<dependencies>
-		<!-- MariaDB JDBC Driver -->
+		<!-- Mysql JDBC Driver -->
 		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<version>2.4.0</version>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.48</version>
 		</dependency>
 
 		<!-- jstl -->
@@ -45,8 +43,8 @@
 			<version>2.0</version>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
-
+	</dependencies>	
+	
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
@@ -57,16 +55,7 @@
 				</excludes>
 			</resource>
 		</resources>
-
 		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -74,6 +63,13 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -86,6 +82,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
-	</build>
+	</build>	
 </project>
